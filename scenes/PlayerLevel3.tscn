@@ -1,0 +1,162 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://src/StateMachine.gd" type="Script" id=1]
+[ext_resource path="res://src/Entity.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://scenes/DebugUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/PlayerStateRun.gd" type="Script" id=5]
+[ext_resource path="res://src/PlayerStateSprint.gd" type="Script" id=6]
+[ext_resource path="res://src/PlayerStateAttackLevel2.gd" type="Script" id=7]
+[ext_resource path="res://src/PlayerStateIdle.gd" type="Script" id=8]
+[ext_resource path="res://scenes/MainCamera.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/InteractionArea.gd" type="Script" id=10]
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 27, 26 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 28, 29 )
+
+[sub_resource type="Animation" id=19]
+resource_name = "Attack Back"
+
+[sub_resource type="Animation" id=20]
+resource_name = "Attack Front"
+
+[sub_resource type="Animation" id=21]
+resource_name = "Attack Left"
+
+[sub_resource type="Animation" id=22]
+resource_name = "Attack Right"
+
+[sub_resource type="Animation" id=23]
+resource_name = "Doge Back"
+length = 0.4
+
+[sub_resource type="Animation" id=24]
+resource_name = "Doge Front"
+length = 0.4
+
+[sub_resource type="Animation" id=25]
+resource_name = "Doge Left"
+length = 0.4
+
+[sub_resource type="Animation" id=26]
+resource_name = "Doge Right"
+length = 0.4
+
+[sub_resource type="Animation" id=27]
+resource_name = "Idle Back"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=28]
+resource_name = "Idle Front"
+length = 2.0
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=29]
+resource_name = "Idle Left"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=30]
+resource_name = "Idle Right"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=31]
+length = 0.001
+
+[sub_resource type="Animation" id=32]
+resource_name = "Run Back"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=33]
+resource_name = "Run Front"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=34]
+resource_name = "Run Left"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=35]
+resource_name = "Run Right"
+length = 0.6
+loop = true
+step = 0.05
+
+[node name="PlayerLevel3" type="KinematicBody2D"]
+collision_layer = 2
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+offset = Vector2( 0, -32 )
+
+[node name="InteractionArea" type="Area2D" parent="."]
+position = Vector2( 0, -32 )
+collision_layer = 0
+collision_mask = 128
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+modulate = Color( 0.686667, 1, 0.6, 1 )
+shape = SubResource( 18 )
+
+[node name="PositionPivot" type="Position2D" parent="."]
+position = Vector2( 0, -32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -32 )
+shape = SubResource( 17 )
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource( 1 )
+initial_state = NodePath("Idle")
+
+[node name="Attack" type="Node" parent="StateMachine"]
+script = ExtResource( 7 )
+attack_recover_time = 0.2
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource( 8 )
+
+[node name="Run" type="Node" parent="StateMachine"]
+script = ExtResource( 5 )
+
+[node name="Sprint" type="Node" parent="StateMachine"]
+script = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/Attack Back" = SubResource( 19 )
+"anims/Attack Front" = SubResource( 20 )
+"anims/Attack Left" = SubResource( 21 )
+"anims/Attack Right" = SubResource( 22 )
+"anims/Doge Back" = SubResource( 23 )
+"anims/Doge Front" = SubResource( 24 )
+"anims/Doge Left" = SubResource( 25 )
+"anims/Doge Right" = SubResource( 26 )
+"anims/Idle Back" = SubResource( 27 )
+"anims/Idle Front" = SubResource( 28 )
+"anims/Idle Left" = SubResource( 29 )
+"anims/Idle Right" = SubResource( 30 )
+anims/RESET = SubResource( 31 )
+"anims/Run Back" = SubResource( 32 )
+"anims/Run Front" = SubResource( 33 )
+"anims/Run Left" = SubResource( 34 )
+"anims/Run Right" = SubResource( 35 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DebugUI" parent="CanvasLayer" instance=ExtResource( 4 )]
+entity_path = NodePath("../..")
+
+[node name="Camera2D" parent="." instance=ExtResource( 9 )]

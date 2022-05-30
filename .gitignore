@@ -1,0 +1,8 @@
+# Godot editor
+default_env.tres
+.import/
+*.import
+
+# Mono
+.mono/
+mono_crash.*.json

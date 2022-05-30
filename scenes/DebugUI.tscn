@@ -1,0 +1,91 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/DebugUI.gd" type="Script" id=1]
+
+[node name="DebugUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CState" type="Label" parent="HBoxContainer"]
+margin_top = 14.0
+margin_right = 510.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "CurrentState"
+align = 1
+
+[node name="Level" type="Label" parent="HBoxContainer"]
+margin_left = 514.0
+margin_top = 14.0
+margin_right = 1024.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Input"
+align = 1
+
+[node name="PState" type="Label" parent="."]
+margin_left = 6.0
+margin_top = 42.0
+margin_right = 127.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "PreviousState"
+align = 1
+valign = 2
+autowrap = true
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -38.0
+margin_right = -10.0
+columns = 2
+
+[node name="VelocityY" type="Label" parent="GridContainer"]
+margin_top = 1.0
+margin_right = 500.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Velocity.Y = "
+
+[node name="CAnimation" type="Label" parent="GridContainer"]
+margin_left = 504.0
+margin_top = 1.0
+margin_right = 1004.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Current animation"
+
+[node name="VelocityX" type="Label" parent="GridContainer"]
+margin_top = 22.0
+margin_right = 500.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Velocity.X = "
+
+[node name="Exp" type="Label" parent="GridContainer"]
+margin_left = 504.0
+margin_top = 22.0
+margin_right = 1004.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "msg"
