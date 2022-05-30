@@ -31,14 +31,14 @@ func physics_update(delta: float):
 	if input_direction == Vector2.ZERO:
 		state_machine.transition_state("Idle")
 	
-	if Input.is_action_just_pressed("Doge"):
-		state_machine.transition_state("Doge", {"direction": input_direction})
-	
 	if Input.is_action_pressed("Sprint"):
 		state_machine.transition_state("Sprint")
 
 	if Input.is_action_just_pressed("Attack") and playerStats.can_attack:
 		state_machine.transition_state("Attack")
+	
+	if Input.is_action_pressed("Defend"):
+		state_machine.transition_state("Defend")
 
 
 func set_input_direction(new_input_direction: Vector2):

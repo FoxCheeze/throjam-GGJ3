@@ -94,6 +94,7 @@ loop = true
 step = 0.05
 
 [node name="PlayerLevel4" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]

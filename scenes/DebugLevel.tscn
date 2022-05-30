@@ -4,31 +4,54 @@
 [ext_resource path="res://scenes/Experience.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/PlayerGroup.gd" type="Script" id=4]
 
-[node name="DebugLevel" type="Node2D"]
-
-[node name="Experience" parent="." instance=ExtResource( 2 )]
-position = Vector2( 260, 145 )
-
-[node name="Experience2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 118, 144 )
-
-[node name="Experience3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 190, 73 )
-
-[node name="Experience4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 335, 76 )
-
-[node name="Experience5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 403, 160 )
-
-[node name="Experience6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 402, 259 )
-
-[node name="Experience7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 327, 322 )
+[node name="DebugLevel" type="YSort"]
 
 [node name="Player" type="Node2D" parent="."]
 script = ExtResource( 4 )
 
 [node name="PlayerLevel1" parent="Player" instance=ExtResource( 1 )]
 position = Vector2( 184, 275 )
+
+[node name="Exp" type="Node2D" parent="."]
+
+[node name="Experience" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="Exp" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )

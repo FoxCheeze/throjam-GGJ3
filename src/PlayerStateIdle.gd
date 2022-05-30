@@ -30,3 +30,6 @@ func physics_update(delta: float):
 	
 	if Input.is_action_just_pressed("Attack") and playerStats.can_attack:
 		state_machine.transition_state("Attack")
+
+	if Input.is_action_pressed("Defend"):
+		state_machine.transition_state("Defend")
