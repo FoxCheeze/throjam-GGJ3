@@ -1,37 +1,43 @@
-extends EnemyState
+extends State
 
 
 func _ready():
-	# Conecta os sinais as suas funções
 	yield(owner, "ready")
-# warning-ignore:return_value_discarded
-	enemy.collisionBoxes.get_node("AttackRangeDetector").connect("body_entered", self, "_on_AttackRangeDetector_body_entered")
-	enemy.animationPlayer.connect("animation_finished", self, "_on_AnimationPlayer_animation_finished")
+
+	var err = entity.collisionBoxes.get_node("AttackRangeDetector").connect("body_entered", self, "_on_AttackRangeDetector_body_entered")
+	assert(err == OK)
+
+	err = entity.animationPlayer.connect("animation_finished", self, "_on_AnimationPlayer_animation_finished")
+	assert(err == OK)
 
 
 func _on_AttackRangeDetector_body_entered(_body):
-	state_machine.transition_to("Attack")
-	enemy.collisionBoxes.disable_box(["AttackRangeDetector"]) # Desabilita para pode re-atacar caso o player não saia da area
+	state_machine.transition_state("Attack")
+	entity.collisionBoxes.disable_box(["AttackRangeDetector"]) # Desabilita para pode re-atacar caso o player não saia da area
 
 
-func enter(_msg := {}):
-	enemy.animationPlayer.play("Attack")
+func on_enter(_msg := {}):
+	AnimationHandler.four_direction_animation(
+		entity.animationPlayer,
+		entity.looking_direction,
+		entity.positionPivot,
+		self.name
+	)
 
 
 func physics_update(delta):
-	enemy.velocity.x = move_toward(enemy.velocity.x, 0, enemy.friction * delta) # Evita o inimigo deslizar enquanto ataca
+	entity.velocity = entity.velocity.move_toward(Vector2.ZERO, entity.friction * delta)
 	
-	enemy.velocity.y += enemy.gravity * delta
-	enemy.velocity = enemy.move_and_slide(enemy.velocity, Vector2.UP)
+	entity.velocity = entity.move_and_slide(entity.velocity)
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name != "Attack":
+	if not anim_name.begins_with("Attack"):
 		return
 	
-	state_machine.transition_to("Chase")
-	enemy.collisionBoxes.enable_box(["AttackRangeDetector"]) # Ativa para poder detectar o player novamente
+	state_machine.transition_state("Chase")
+	entity.collisionBoxes.enable_box(["AttackRangeDetector"]) # Ativa para poder detectar o player novamente
 
 
-func exit():
-	enemy.collisionBoxes.enable_box(["AttackRangeDetector"]) # Evita sair com caixa desativada （念の為）
+func on_exit():
+	entity.collisionBoxes.enable_box(["AttackRangeDetector"]) # Evita sair com caixa desativada （念の為）
