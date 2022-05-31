@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://src/StateMachine.gd" type="Script" id=1]
 [ext_resource path="res://src/Entity.gd" type="Script" id=2]
@@ -6,15 +6,21 @@
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://src/EnemyStateIdle1.gd" type="Script" id=5]
 [ext_resource path="res://src/EnemyStateRoam1.gd" type="Script" id=6]
-[ext_resource path="res://src/DebugLabel.gd" type="Script" id=7]
+[ext_resource path="res://scenes/HitBox.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/EnemyStateChase1.gd" type="Script" id=8]
 [ext_resource path="res://src/EnemyStateAttack1.gd" type="Script" id=9]
+[ext_resource path="res://src/HurtBox.gd" type="Script" id=10]
+[ext_resource path="res://scenes/DebugUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/EnemyStateDie1.gd" type="Script" id=12]
 
 [sub_resource type="CircleShape2D" id=27]
 radius = 158.028
 
 [sub_resource type="CircleShape2D" id=28]
 radius = 76.1052
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 27, 27 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 28, 29 )
@@ -55,6 +61,9 @@ length = 0.6
 loop = true
 step = 0.05
 
+[sub_resource type="Animation" id=30]
+resource_name = "Die"
+
 [sub_resource type="Animation" id=14]
 resource_name = "Idle Back"
 length = 2.0
@@ -94,6 +103,10 @@ resource_name = "Roam Right"
 [node name="Enemy2" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+offset = Vector2( 0, -32 )
+
 [node name="PositionPivot" type="Position2D" parent="."]
 position = Vector2( 0, -32 )
 __meta__ = {
@@ -118,9 +131,16 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PositionPivot/CollisionBoxes/AttackRangeDetector"]
 shape = SubResource( 28 )
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 4 )
-offset = Vector2( 0, -32 )
+[node name="HitBox" parent="PositionPivot/CollisionBoxes" instance=ExtResource( 7 )]
+
+[node name="HurtBox" type="Area2D" parent="PositionPivot/CollisionBoxes"]
+modulate = Color( 0.0117647, 0.141176, 1, 1 )
+collision_layer = 64
+collision_mask = 0
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionPivot/CollisionBoxes/HurtBox"]
+shape = SubResource( 29 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -32 )
@@ -128,13 +148,16 @@ shape = SubResource( 1 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 1 )
-initial_state = NodePath("Idle")
+initial_state = NodePath("Roam")
 
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource( 9 )
 
 [node name="Chase" type="Node" parent="StateMachine"]
 script = ExtResource( 8 )
+
+[node name="Die" type="Node" parent="StateMachine"]
+script = ExtResource( 12 )
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 5 )
@@ -153,6 +176,7 @@ script = ExtResource( 6 )
 "anims/Chase Front" = SubResource( 20 )
 "anims/Chase Left" = SubResource( 21 )
 "anims/Chase Right" = SubResource( 22 )
+anims/Die = SubResource( 30 )
 "anims/Idle Back" = SubResource( 14 )
 "anims/Idle Front" = SubResource( 15 )
 "anims/Idle Left" = SubResource( 16 )
@@ -163,9 +187,62 @@ anims/RESET = SubResource( 18 )
 "anims/Roam Left" = SubResource( 25 )
 "anims/Roam Right" = SubResource( 26 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = -20.0
-margin_top = -88.0
-margin_right = 20.0
-margin_bottom = -74.0
-script = ExtResource( 7 )
+[node name="DebugUI" parent="." instance=ExtResource( 11 )]
+margin_top = -32.0
+margin_bottom = -32.0
+entity_path = NodePath("..")
+
+[node name="HBoxContainer" parent="DebugUI" index="0"]
+margin_left = -70.0
+margin_top = -84.0
+margin_right = 47.0
+margin_bottom = -42.0
+
+[node name="CState" parent="DebugUI/HBoxContainer" index="0"]
+margin_right = 79.0
+
+[node name="Health" parent="DebugUI/HBoxContainer" index="1"]
+margin_left = 83.0
+margin_right = 117.0
+
+[node name="Level" parent="DebugUI/HBoxContainer" index="2"]
+visible = false
+margin_left = 83.0
+margin_right = 117.0
+
+[node name="PState" parent="DebugUI" index="1"]
+margin_left = -170.0
+margin_top = -46.0
+margin_right = -49.0
+margin_bottom = -32.0
+
+[node name="GridContainer" parent="DebugUI" index="2"]
+margin_left = -43.0
+margin_top = 38.0
+margin_right = 155.0
+margin_bottom = 88.0
+columns = 1
+
+[node name="VelocityY" parent="DebugUI/GridContainer" index="0"]
+margin_top = 0.0
+margin_right = 198.0
+margin_bottom = 14.0
+
+[node name="CAnimation" parent="DebugUI/GridContainer" index="1"]
+margin_left = 0.0
+margin_top = 18.0
+margin_right = 198.0
+margin_bottom = 32.0
+
+[node name="VelocityX" parent="DebugUI/GridContainer" index="2"]
+margin_top = 36.0
+margin_right = 198.0
+margin_bottom = 50.0
+
+[node name="Exp" parent="DebugUI/GridContainer" index="3"]
+visible = false
+margin_left = 83.0
+margin_right = 198.0
+
+[editable path="PositionPivot/CollisionBoxes/HitBox"]
+[editable path="DebugUI"]

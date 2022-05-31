@@ -6,7 +6,8 @@ var entity: Entity = null
 
 onready var previousState = get_node("PState") as Label
 onready var currentState = get_node("HBoxContainer/CState") as Label
-onready var level = get_node("HBoxContainer/Level")
+onready var level = get_node("HBoxContainer/Level") as Label
+onready var health = get_node("HBoxContainer/Health") as Label
 
 onready var velocity_y = get_node("GridContainer/VelocityY") as Label
 onready var velocity_x = get_node("GridContainer/VelocityX") as Label
@@ -23,6 +24,7 @@ func _process(_delta):
 	previousState.text = "History:\n" + str(entity.get_node("StateMachine").history)
 	currentState.text = str(entity.get_node("StateMachine").state)
 	level.text = str(playerStats.level)
+	health.text = "Health " + str(entity.health)
 
 	velocity_x.text = "Velocity.x = " + str(entity.velocity.x)
 	velocity_y.text = "Velocity.y = " + str(entity.velocity.y)

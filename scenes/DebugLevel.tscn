@@ -1,9 +1,159 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://scenes/PlayerLevel1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Experience.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Enemy2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/PlayerGroup.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Attack Back"
+
+[sub_resource type="Animation" id=2]
+resource_name = "Attack Front"
+
+[sub_resource type="Animation" id=3]
+resource_name = "Attack Left"
+
+[sub_resource type="Animation" id=4]
+resource_name = "Attack Right"
+
+[sub_resource type="Animation" id=5]
+resource_name = "Chase Back"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=6]
+resource_name = "Chase Front"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=7]
+resource_name = "Chase Left"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=8]
+resource_name = "Chase Right"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=9]
+resource_name = "Die"
+
+[sub_resource type="Animation" id=10]
+resource_name = "Idle Back"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=11]
+resource_name = "Idle Front"
+length = 2.0
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=12]
+resource_name = "Idle Left"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=13]
+resource_name = "Idle Right"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+
+[sub_resource type="Animation" id=15]
+resource_name = "Roam Back"
+
+[sub_resource type="Animation" id=16]
+resource_name = "Roam Front"
+
+[sub_resource type="Animation" id=17]
+resource_name = "Roam Left"
+
+[sub_resource type="Animation" id=18]
+resource_name = "Roam Right"
+
+[sub_resource type="Animation" id=19]
+resource_name = "Attack Back"
+
+[sub_resource type="Animation" id=20]
+resource_name = "Attack Front"
+
+[sub_resource type="Animation" id=21]
+resource_name = "Attack Left"
+
+[sub_resource type="Animation" id=22]
+resource_name = "Attack Right"
+
+[sub_resource type="Animation" id=23]
+resource_name = "Chase Back"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=24]
+resource_name = "Chase Front"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=25]
+resource_name = "Chase Left"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=26]
+resource_name = "Chase Right"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=27]
+resource_name = "Die"
+
+[sub_resource type="Animation" id=28]
+resource_name = "Idle Back"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=29]
+resource_name = "Idle Front"
+length = 2.0
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=30]
+resource_name = "Idle Left"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=31]
+resource_name = "Idle Right"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=32]
+length = 0.001
+
+[sub_resource type="Animation" id=33]
+resource_name = "Roam Back"
+
+[sub_resource type="Animation" id=34]
+resource_name = "Roam Front"
+
+[sub_resource type="Animation" id=35]
+resource_name = "Roam Left"
+
+[sub_resource type="Animation" id=36]
+resource_name = "Roam Right"
 
 [node name="DebugLevel" type="YSort"]
 
@@ -60,5 +210,62 @@ position = Vector2( 277, 315 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 440, 277 )
+health = 10
+
+[node name="Enemy3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 583, 462 )
+health = 10
+
+[node name="AnimationPlayer" parent="Enemy3" index="4"]
+"anims/Attack Back" = SubResource( 1 )
+"anims/Attack Front" = SubResource( 2 )
+"anims/Attack Left" = SubResource( 3 )
+"anims/Attack Right" = SubResource( 4 )
+"anims/Chase Back" = SubResource( 5 )
+"anims/Chase Front" = SubResource( 6 )
+"anims/Chase Left" = SubResource( 7 )
+"anims/Chase Right" = SubResource( 8 )
+anims/Die = SubResource( 9 )
+"anims/Idle Back" = SubResource( 10 )
+"anims/Idle Front" = SubResource( 11 )
+"anims/Idle Left" = SubResource( 12 )
+"anims/Idle Right" = SubResource( 13 )
+anims/RESET = SubResource( 14 )
+"anims/Roam Back" = SubResource( 15 )
+"anims/Roam Front" = SubResource( 16 )
+"anims/Roam Left" = SubResource( 17 )
+"anims/Roam Right" = SubResource( 18 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 606, 84 )
+health = 10
+
+[node name="AnimationPlayer" parent="Enemy4" index="4"]
+"anims/Attack Back" = SubResource( 19 )
+"anims/Attack Front" = SubResource( 20 )
+"anims/Attack Left" = SubResource( 21 )
+"anims/Attack Right" = SubResource( 22 )
+"anims/Chase Back" = SubResource( 23 )
+"anims/Chase Front" = SubResource( 24 )
+"anims/Chase Left" = SubResource( 25 )
+"anims/Chase Right" = SubResource( 26 )
+anims/Die = SubResource( 27 )
+"anims/Idle Back" = SubResource( 28 )
+"anims/Idle Front" = SubResource( 29 )
+"anims/Idle Left" = SubResource( 30 )
+"anims/Idle Right" = SubResource( 31 )
+anims/RESET = SubResource( 32 )
+"anims/Roam Back" = SubResource( 33 )
+"anims/Roam Front" = SubResource( 34 )
+"anims/Roam Left" = SubResource( 35 )
+"anims/Roam Right" = SubResource( 36 )
 
 [editable path="Enemy2"]
+[editable path="Enemy2/PositionPivot/CollisionBoxes/HitBox"]
+[editable path="Enemy2/DebugUI"]
+[editable path="Enemy3"]
+[editable path="Enemy3/PositionPivot/CollisionBoxes/HitBox"]
+[editable path="Enemy3/DebugUI"]
+[editable path="Enemy4"]
+[editable path="Enemy4/PositionPivot/CollisionBoxes/HitBox"]
+[editable path="Enemy4/DebugUI"]
