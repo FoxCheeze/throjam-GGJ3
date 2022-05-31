@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="RoamLimit" type="Position2D"]
+position = Vector2( 15, -3 )
+__meta__ = {
+"_gizmo_extents_": 4.0
+}

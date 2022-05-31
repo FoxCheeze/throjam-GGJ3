@@ -1,0 +1,135 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://src/StateMachine.gd" type="Script" id=1]
+[ext_resource path="res://src/Entity.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://src/EnemyStateIdle1.gd" type="Script" id=5]
+[ext_resource path="res://src/EnemyStateRoam1.gd" type="Script" id=6]
+[ext_resource path="res://src/DebugLabel.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28, 29 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Attack Back"
+
+[sub_resource type="Animation" id=3]
+resource_name = "Attack Front"
+
+[sub_resource type="Animation" id=4]
+resource_name = "Attack Left"
+
+[sub_resource type="Animation" id=5]
+resource_name = "Attack Right"
+
+[sub_resource type="Animation" id=14]
+resource_name = "Idle Back"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=15]
+resource_name = "Idle Front"
+length = 2.0
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=16]
+resource_name = "Idle Left"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=17]
+resource_name = "Idle Right"
+length = 2.0
+loop = true
+
+[sub_resource type="Animation" id=18]
+length = 0.001
+
+[sub_resource type="Animation" id=23]
+resource_name = "Roam Back"
+
+[sub_resource type="Animation" id=24]
+resource_name = "Roam Front"
+
+[sub_resource type="Animation" id=25]
+resource_name = "Roam Left"
+
+[sub_resource type="Animation" id=26]
+resource_name = "Roam Right"
+
+[sub_resource type="Animation" id=19]
+resource_name = "Run Back"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=20]
+resource_name = "Run Front"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=21]
+resource_name = "Run Left"
+length = 0.6
+loop = true
+step = 0.05
+
+[sub_resource type="Animation" id=22]
+resource_name = "Run Right"
+length = 0.6
+loop = true
+step = 0.05
+
+[node name="Enemy2" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="PositionPivot" type="Position2D" parent="."]
+position = Vector2( 0, -32 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+offset = Vector2( 0, -32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -32 )
+shape = SubResource( 1 )
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource( 1 )
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource( 5 )
+
+[node name="IdleDurationTimer" type="Timer" parent="StateMachine/Idle"]
+
+[node name="Roam" type="Node" parent="StateMachine"]
+script = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/Attack Back" = SubResource( 2 )
+"anims/Attack Front" = SubResource( 3 )
+"anims/Attack Left" = SubResource( 4 )
+"anims/Attack Right" = SubResource( 5 )
+"anims/Idle Back" = SubResource( 14 )
+"anims/Idle Front" = SubResource( 15 )
+"anims/Idle Left" = SubResource( 16 )
+"anims/Idle Right" = SubResource( 17 )
+anims/RESET = SubResource( 18 )
+"anims/Roam Back" = SubResource( 23 )
+"anims/Roam Front" = SubResource( 24 )
+"anims/Roam Left" = SubResource( 25 )
+"anims/Roam Right" = SubResource( 26 )
+"anims/Run Back" = SubResource( 19 )
+"anims/Run Front" = SubResource( 20 )
+"anims/Run Left" = SubResource( 21 )
+"anims/Run Right" = SubResource( 22 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -20.0
+margin_top = -88.0
+margin_right = 20.0
+margin_bottom = -74.0
+script = ExtResource( 7 )
