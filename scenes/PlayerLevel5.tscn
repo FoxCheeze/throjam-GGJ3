@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://src/InteractionArea.gd" type="Script" id=1]
 [ext_resource path="res://src/Entity.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://src/PlayerStateSprint.gd" type="Script" id=9]
 [ext_resource path="res://src/PlayerStateDefend.gd" type="Script" id=10]
 [ext_resource path="res://scenes/DebugUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/CollisionBoxes.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 27, 26 )
@@ -126,6 +127,9 @@ shape = SubResource( 1 )
 
 [node name="PositionPivot" type="Position2D" parent="."]
 position = Vector2( 0, -32 )
+
+[node name="CollisionBoxes" type="Position2D" parent="PositionPivot"]
+script = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -32 )

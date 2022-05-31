@@ -7,7 +7,7 @@
 
 [node name="DebugLevel" type="YSort"]
 
-[node name="Player" type="Node2D" parent="."]
+[node name="Player" type="YSort" parent="."]
 script = ExtResource( 4 )
 
 [node name="PlayerLevel1" parent="Player" instance=ExtResource( 1 )]
