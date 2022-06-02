@@ -20,23 +20,15 @@ static func four_direction_animation(
 	)
 	
 	if direction.y < 0 and to_positive(direction.y) < to_positive(direction.x): # Up
-		positionPivot.rotation_degrees = 0
-		positionPivot.scale.y = -1
 		animationPlayer.play("%s Back" % animation_name)
 	
 	elif direction.y > 0 and to_positive(direction.y) > to_positive(direction.x): # Down
-		positionPivot.rotation_degrees = 0
-		positionPivot.scale.y = 1
 		animationPlayer.play("%s Front" % animation_name)
 
 	if direction.x < 0 and to_positive(direction.y) >= to_positive(direction.x): # Left
-		positionPivot.rotation_degrees = 90
-		positionPivot.scale.y = 1
 		animationPlayer.play("%s Left" % animation_name)
 
 	elif direction.x > 0 and to_positive(direction.y) <= to_positive(direction.x): # Right
-		positionPivot.rotation_degrees = 90
-		positionPivot.scale.y = -1
 		animationPlayer.play("%s Right" % animation_name)
 
 

@@ -15,6 +15,7 @@ func _ready():
 
 
 func on_enter(_msg: Dictionary = {}):
+	entity.get_node("Slash").visible = true
 	AnimationHandler.four_direction_animation(
 		entity.animationPlayer,
 		entity.looking_direction,
@@ -40,5 +41,7 @@ func _on_AnimationPlayer_animation_finished(animation_name: String):
 
 
 func on_exit():
+	entity.get_node("Slash").visible = false
+	entity.collisionBoxes.disable_box(["HitBox"])
 	playerStats.can_attack = false
 	playerStats.attackRecoverTimer.start(attack_recover_time)

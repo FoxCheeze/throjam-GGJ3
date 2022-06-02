@@ -2,4 +2,5 @@
 
 [node name="Camera2D" type="Camera2D"]
 current = true
+zoom = Vector2( 0.8, 0.8 )
 smoothing_enabled = true

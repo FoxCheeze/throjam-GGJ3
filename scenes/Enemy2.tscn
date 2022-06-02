@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://src/StateMachine.gd" type="Script" id=1]
 [ext_resource path="res://src/Entity.gd" type="Script" id=2]
@@ -9,7 +9,7 @@
 [ext_resource path="res://scenes/HitBox.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/EnemyStateChase1.gd" type="Script" id=8]
 [ext_resource path="res://src/EnemyStateAttack1.gd" type="Script" id=9]
-[ext_resource path="res://src/HurtBox.gd" type="Script" id=10]
+[ext_resource path="res://scenes/HurtBox.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/DebugUI.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/EnemyStateDie1.gd" type="Script" id=12]
 
@@ -19,7 +19,10 @@ radius = 158.028
 [sub_resource type="CircleShape2D" id=28]
 radius = 76.1052
 
-[sub_resource type="RectangleShape2D" id=29]
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 10, 32 )
+
+[sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 27, 27 )
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -27,15 +30,111 @@ extents = Vector2( 28, 29 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Attack Back"
+tracks/0/type = "value"
+tracks/0/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -42 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -90.0002 ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Attack Front"
+tracks/0/type = "value"
+tracks/0/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 42 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -90.0002 ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "Attack Left"
+tracks/0/type = "value"
+tracks/0/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -43, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "Attack Right"
+tracks/0/type = "value"
+tracks/0/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 47, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [sub_resource type="Animation" id=19]
 resource_name = "Chase Back"
@@ -87,6 +186,30 @@ loop = true
 
 [sub_resource type="Animation" id=18]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 42 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -90.0002 ]
+}
 
 [sub_resource type="Animation" id=23]
 resource_name = "Roam Back"
@@ -132,15 +255,17 @@ collision_mask = 2
 shape = SubResource( 28 )
 
 [node name="HitBox" parent="PositionPivot/CollisionBoxes" instance=ExtResource( 7 )]
+collision_layer = 32
+collision_mask = 8
 
-[node name="HurtBox" type="Area2D" parent="PositionPivot/CollisionBoxes"]
-modulate = Color( 0.0117647, 0.141176, 1, 1 )
+[node name="CollisionShape2D" parent="PositionPivot/CollisionBoxes/HitBox" index="0"]
+shape = SubResource( 32 )
+
+[node name="HurtBox" parent="PositionPivot/CollisionBoxes" instance=ExtResource( 10 )]
 collision_layer = 64
-collision_mask = 0
-script = ExtResource( 10 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionPivot/CollisionBoxes/HurtBox"]
-shape = SubResource( 29 )
+[node name="CollisionShape2D" parent="PositionPivot/CollisionBoxes/HurtBox" index="0"]
+shape = SubResource( 31 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -32 )
@@ -245,4 +370,5 @@ margin_left = 83.0
 margin_right = 198.0
 
 [editable path="PositionPivot/CollisionBoxes/HitBox"]
+[editable path="PositionPivot/CollisionBoxes/HurtBox"]
 [editable path="DebugUI"]
