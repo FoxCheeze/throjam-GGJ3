@@ -12,7 +12,7 @@ func on_enter(_msg := {}):
 
 
 func drop_exp(exp_amount: int):
-	for i in range(exp_amount):
+	for _i in range(exp_amount):
 		var new_position = Vector2(
 			rand_range(entity.global_position.x - drop_range, entity.global_position.x + drop_range),
 			rand_range(entity.global_position.y - drop_range, entity.global_position.y + drop_range)

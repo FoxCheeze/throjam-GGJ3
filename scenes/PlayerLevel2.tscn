@@ -18,11 +18,11 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 6 )
 
-[sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 1, 5 )
-
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 6.50002, 12 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 1, 4 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 2, 5 )
@@ -329,6 +329,18 @@ tracks/6/keys = {
 "update": 0,
 "values": [ Vector2( -4, -1 ), Vector2( -19, -1 ) ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:shape:extents")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 6.50002, 12 ) ]
+}
 
 [sub_resource type="Animation" id=19]
 resource_name = "Attack Right"
@@ -417,6 +429,18 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 4, -1 ), Vector2( 18, -1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:shape:extents")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 6.50002, 12 ) ]
 }
 
 [sub_resource type="Animation" id=22]
@@ -725,12 +749,6 @@ position = Vector2( 0, -5 )
 [node name="CollisionBoxes" type="Position2D" parent="PositionPivot"]
 script = ExtResource( 3 )
 
-[node name="HurtBox" parent="PositionPivot/CollisionBoxes" instance=ExtResource( 12 )]
-collision_layer = 8
-
-[node name="CollisionShape2D" parent="PositionPivot/CollisionBoxes/HurtBox" index="0"]
-shape = SubResource( 20 )
-
 [node name="HitBox" parent="PositionPivot/CollisionBoxes" instance=ExtResource( 13 )]
 collision_layer = 4
 collision_mask = 64
@@ -739,6 +757,12 @@ collision_mask = 64
 position = Vector2( 0, 6 )
 shape = SubResource( 21 )
 disabled = true
+
+[node name="HurtBox" parent="PositionPivot/CollisionBoxes" instance=ExtResource( 12 )]
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="PositionPivot/CollisionBoxes/HurtBox" index="0"]
+shape = SubResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -5 )
@@ -779,5 +803,5 @@ entity_path = NodePath("../..")
 
 [node name="Camera2D" parent="." instance=ExtResource( 10 )]
 
-[editable path="PositionPivot/CollisionBoxes/HurtBox"]
 [editable path="PositionPivot/CollisionBoxes/HitBox"]
+[editable path="PositionPivot/CollisionBoxes/HurtBox"]

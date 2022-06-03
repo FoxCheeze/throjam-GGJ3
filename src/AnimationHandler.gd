@@ -7,7 +7,7 @@ extends Object
 static func four_direction_animation(
 		animationPlayer: AnimationPlayer,
 		direction: Vector2,
-		positionPivot: Position2D,
+		_positionPivot: Position2D,
 		animation_name: String
 	) -> void:
 
