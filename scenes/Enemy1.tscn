@@ -1,18 +1,18 @@
 [gd_scene load_steps=33 format=2]
 
-[ext_resource path="res://src/StateMachine.gd" type="Script" id=1]
-[ext_resource path="res://src/Entity.gd" type="Script" id=2]
-[ext_resource path="res://src/CollisionBoxes.gd" type="Script" id=3]
-[ext_resource path="res://scenes/EnemyStateIdle.1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/EnemyStateChase.1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/EnemyStateDie.1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/HurtBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/EnemyStateIdle.1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/EnemyStateChase.1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/EnemyStateDie.1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Enemy.1.png" type="Texture" id=5]
+[ext_resource path="res://src/StateMachine.gd" type="Script" id=6]
 [ext_resource path="res://scenes/HitBox.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/Enemy.2.png" type="Texture" id=8]
+[ext_resource path="res://scenes/DebugUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/EnemyStateAttack.1.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/HurtBox.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/DebugUI.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/slash.png" type="Texture" id=12]
-[ext_resource path="res://scenes/EnemyStateRoam.1.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/slash.png" type="Texture" id=10]
+[ext_resource path="res://scenes/EnemyStateRoam.1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Entity.gd" type="Script" id=12]
+[ext_resource path="res://src/CollisionBoxes.gd" type="Script" id=13]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 50.0
@@ -43,7 +43,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 17 ]
+"values": [ 2 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Slash:frame")
@@ -257,7 +257,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 18 ]
+"values": [ 17 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Slash:frame")
@@ -358,7 +358,7 @@ tracks/0/keys = {
 "times": PoolRealArray( -0.05, 0 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 19, 19 ]
+"values": [ 19, 18 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Slash:frame")
@@ -394,7 +394,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -7, -8 ), Vector2( 14, -9 ) ]
+"values": [ Vector2( -7, -8 ), Vector2( 7, -8 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:rotation_degrees")
@@ -430,7 +430,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 4, -1 ), Vector2( 25, -2 ) ]
+"values": [ Vector2( 4, -1 ), Vector2( 18, -1 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:shape:extents")
@@ -458,7 +458,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 20 ]
+"values": [ 19 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:modulate")
@@ -667,7 +667,7 @@ tracks/9/keys = {
 
 [sub_resource type="Animation" id=16]
 resource_name = "Roam Back"
-length = 0.55
+length = 0.6
 loop = true
 step = 0.05
 tracks/0/type = "value"
@@ -677,7 +677,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 10, 2, 11, 2 ]
@@ -685,7 +685,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=17]
 resource_name = "Roam Front"
-length = 0.55
+length = 0.6
 loop = true
 step = 0.05
 tracks/0/type = "value"
@@ -695,7 +695,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 8, 0, 9, 0 ]
@@ -703,7 +703,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=18]
 resource_name = "Roam Left"
-length = 0.55
+length = 0.6
 loop = true
 step = 0.05
 tracks/0/type = "value"
@@ -713,7 +713,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 12, 4, 13, 4 ]
@@ -721,7 +721,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=19]
 resource_name = "Roam Right"
-length = 0.55
+length = 0.6
 loop = true
 step = 0.05
 tracks/0/type = "value"
@@ -731,23 +731,24 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 14, 6, 15, 6 ]
 }
 
-[node name="Enemy2" type="KinematicBody2D"]
-script = ExtResource( 2 )
-acceleration = 120.0
-friction = 250.0
-max_speed = 40.0
+[node name="Enemy1" type="KinematicBody2D"]
+collision_layer = 17
+script = ExtResource( 12 )
+acceleration = 100.0
+friction = 100.0
+max_speed = 30.0
 
 [node name="PositionPivot" type="Position2D" parent="."]
 position = Vector2( 0, -5 )
 
 [node name="CollisionBoxes" type="Position2D" parent="PositionPivot"]
-script = ExtResource( 3 )
+script = ExtResource( 13 )
 
 [node name="ChaseDetector" type="Area2D" parent="PositionPivot/CollisionBoxes"]
 collision_layer = 0
@@ -773,14 +774,14 @@ position = Vector2( 0, 6 )
 shape = SubResource( 3 )
 disabled = true
 
-[node name="HurtBox" parent="PositionPivot/CollisionBoxes" instance=ExtResource( 10 )]
+[node name="HurtBox" parent="PositionPivot/CollisionBoxes" instance=ExtResource( 1 )]
 collision_layer = 64
 
 [node name="CollisionShape2D" parent="PositionPivot/CollisionBoxes/HurtBox" index="0"]
 shape = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 8 )
+texture = ExtResource( 5 )
 offset = Vector2( 0, -8.5 )
 hframes = 7
 vframes = 3
@@ -788,7 +789,7 @@ vframes = 3
 [node name="Slash" type="Sprite" parent="."]
 visible = false
 position = Vector2( 0, -8 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 hframes = 5
 vframes = 2
 frame = 1
@@ -798,19 +799,19 @@ position = Vector2( 0, -5 )
 shape = SubResource( 5 )
 
 [node name="StateMachine" type="Node" parent="."]
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 initial_state = NodePath("Roam")
 
 [node name="Attack" parent="StateMachine" instance=ExtResource( 9 )]
 
-[node name="Chase" parent="StateMachine" instance=ExtResource( 5 )]
+[node name="Chase" parent="StateMachine" instance=ExtResource( 3 )]
 
-[node name="Die" parent="StateMachine" instance=ExtResource( 6 )]
+[node name="Die" parent="StateMachine" instance=ExtResource( 4 )]
 
-[node name="Idle" parent="StateMachine" instance=ExtResource( 4 )]
+[node name="Idle" parent="StateMachine" instance=ExtResource( 2 )]
 
-[node name="Roam" parent="StateMachine" instance=ExtResource( 13 )]
-roam_limit = 50.0
+[node name="Roam" parent="StateMachine" instance=ExtResource( 11 )]
+roam_limit = 70.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Attack Back" = SubResource( 6 )
@@ -828,7 +829,7 @@ anims/RESET = SubResource( 15 )
 "anims/Roam Left" = SubResource( 18 )
 "anims/Roam Right" = SubResource( 19 )
 
-[node name="DebugUI" parent="." instance=ExtResource( 11 )]
+[node name="DebugUI" parent="." instance=ExtResource( 8 )]
 anchor_right = 0.0
 margin_left = 1.0
 margin_top = -7.0

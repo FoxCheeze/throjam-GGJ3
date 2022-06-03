@@ -7,8 +7,9 @@ export var drop_range: float = 100
 func on_enter(_msg := {}):
 	entity.collisionBoxes.disable_box(["All"])
 	entity.animationPlayer.play("Die")
-	yield(entity.animationPlayer, "animation_finished")
 	drop_exp(exp_drop)
+	yield(entity.animationPlayer, "animation_finished")
+	entity.queue_free()
 
 
 func drop_exp(exp_amount: int):
@@ -22,4 +23,3 @@ func drop_exp(exp_amount: int):
 		experience.global_position = new_position
 		get_tree().get_root().call_deferred("add_child", experience)
 
-	entity.queue_free()

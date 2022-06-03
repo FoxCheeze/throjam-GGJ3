@@ -7,11 +7,12 @@ func _ready():
 
 
 func on_player_level_up(previous_level):
+	if playerStats.level > 5:
+		return
+	
 	var player = get_node("PlayerLevel%d" % previous_level)
 	var current_position = player.global_position
 
-	if playerStats.level > 5:
-		return
 	
 	var new_player = load("res://scenes/PlayerLevel%d.tscn" % playerStats.level).instance()
 	

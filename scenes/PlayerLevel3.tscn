@@ -723,6 +723,7 @@ hframes = 7
 vframes = 4
 
 [node name="Slash" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, -8 )
 texture = ExtResource( 15 )
 hframes = 5
@@ -747,7 +748,8 @@ position = Vector2( 0, -5 )
 script = ExtResource( 11 )
 
 [node name="HitBox" parent="PositionPivot/CollisionBoxes" instance=ExtResource( 13 )]
-collision_layer = 68
+collision_layer = 4
+collision_mask = 64
 
 [node name="CollisionShape2D" parent="PositionPivot/CollisionBoxes/HitBox" index="0"]
 position = Vector2( 0, 6 )
