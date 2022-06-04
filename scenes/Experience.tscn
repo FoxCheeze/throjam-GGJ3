@@ -110,7 +110,7 @@ tracks/3/keys = {
 radius = 3.0
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 55.0818
+radius = 41.0122
 
 [node name="Experience" type="Area2D"]
 collision_layer = 128
