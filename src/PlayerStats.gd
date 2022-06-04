@@ -9,6 +9,7 @@ var attackRecoverTimer: Timer = null
 var can_attack: bool = true
 var experience: int = 0 
 var experience_required: int = get_experience_required()
+var player = null
 
 
 func get_experience_required() -> int:
@@ -33,6 +34,7 @@ func gain_experience(experience_value: int):
 
 func level_up():
 	level += 1
+	player.health = player.max_health
 	emit_signal("leveled_up", level - 1)
 
 	experience_required = get_experience_required()
