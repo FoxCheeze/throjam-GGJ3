@@ -257,6 +257,7 @@ anims/RESET = SubResource( 11 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DebugUI" parent="CanvasLayer" instance=ExtResource( 10 )]
+visible = false
 entity_path = NodePath("../..")
 
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]

@@ -35,7 +35,11 @@ func set_health(new_health):
 	if new_health == health:
 		return
 	
-	health = new_health
+	if new_health < 0:
+		health = 0
+	else:
+		health = new_health
+
 	if health <= 0:
 		collisionBoxes.disable_box(["All"])
 		get_node("StateMachine").transition_state("Die")

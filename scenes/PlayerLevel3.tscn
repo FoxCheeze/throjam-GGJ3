@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://src/StateMachine.gd" type="Script" id=1]
 [ext_resource path="res://src/Entity.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://scenes/HitBox.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/PlayerStateSprint.1.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/slash.png" type="Texture" id=15]
+[ext_resource path="res://scenes/AttackRecoverBar.tscn" type="PackedScene" id=16]
 
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 4, 6.5 )
@@ -766,6 +767,14 @@ shape = SubResource( 20 )
 position = Vector2( 0, -5.5 )
 shape = SubResource( 17 )
 
+[node name="AttackRecoverBar" parent="." instance=ExtResource( 16 )]
+margin_left = -12.0
+margin_top = 10.0
+margin_right = -12.0
+margin_bottom = 10.0
+rect_scale = Vector2( 0.25, 0.25 )
+attackProperties_path = NodePath("../StateMachine/Attack")
+
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 1 )
 initial_state = NodePath("Idle")
@@ -800,6 +809,7 @@ anims/RESET = SubResource( 30 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DebugUI" parent="CanvasLayer" instance=ExtResource( 4 )]
+visible = false
 entity_path = NodePath("../..")
 
 [node name="Camera2D" parent="." instance=ExtResource( 9 )]

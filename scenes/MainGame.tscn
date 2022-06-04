@@ -14,7 +14,7 @@
 background_mode = 4
 glow_enabled = true
 glow_intensity = 0.29
-glow_strength = 0.95
+glow_strength = 0.9
 glow_bloom = 0.22
 glow_blend_mode = 1
 glow_bicubic_upscale = true
@@ -43,6 +43,7 @@ position = Vector2( 11, 34 )
 
 [node name="Enemy1" parent="." instance=ExtResource( 6 )]
 position = Vector2( -186, 109 )
+damage = 52
 
 [node name="Enemy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( -61, 148 )
@@ -53,16 +54,42 @@ position = Vector2( 57, 136 )
 [node name="Enemy4Group" parent="." instance=ExtResource( 7 )]
 position = Vector2( 213, 87 )
 
-[node name="Experience" parent="." instance=ExtResource( 3 )]
+[node name="Exp" type="YSort" parent="."]
+
+[node name="Experience" parent="Exp" instance=ExtResource( 3 )]
 position = Vector2( -267, -6 )
 
-[node name="Experience2" parent="." instance=ExtResource( 3 )]
+[node name="Experience2" parent="Exp" instance=ExtResource( 3 )]
 position = Vector2( -273, -52 )
 
-[node name="Experience3" parent="." instance=ExtResource( 3 )]
+[node name="Experience3" parent="Exp" instance=ExtResource( 3 )]
 position = Vector2( -297, 48 )
 
-[node name="Experience4" parent="." instance=ExtResource( 3 )]
-position = Vector2( -220, -27 )
+[node name="Experience4" parent="Exp" instance=ExtResource( 3 )]
+position = Vector2( -121, -127 )
+
+[node name="Experience5" parent="Exp" instance=ExtResource( 3 )]
+position = Vector2( -168, -106 )
+
+[node name="Experience6" parent="Exp" instance=ExtResource( 3 )]
+position = Vector2( -174, -152 )
+
+[node name="Experience7" parent="Exp" instance=ExtResource( 3 )]
+position = Vector2( -198, -52 )
+
+[node name="Experience8" parent="Exp" instance=ExtResource( 3 )]
+position = Vector2( -121, -127 )
+
+[node name="Experience9" parent="Exp" instance=ExtResource( 3 )]
+position = Vector2( -386, -111 )
+
+[node name="Experience10" parent="Exp" instance=ExtResource( 3 )]
+position = Vector2( -392, -157 )
+
+[node name="Experience11" parent="Exp" instance=ExtResource( 3 )]
+position = Vector2( -416, -57 )
+
+[node name="Experience12" parent="Exp" instance=ExtResource( 3 )]
+position = Vector2( -339, -132 )
 
 [editable path="Player"]

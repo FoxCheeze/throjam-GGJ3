@@ -18,6 +18,7 @@ func get_experience_required() -> int:
 
 func _ready():
 	attackRecoverTimer = Timer.new()
+	attackRecoverTimer.one_shot = true
 	call_deferred("add_child", attackRecoverTimer)
 
 	var err = attackRecoverTimer.connect("timeout", self, "on_AttackRecoverTimer_timeout")

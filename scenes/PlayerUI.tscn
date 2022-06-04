@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/HealthBarOver.png" type="Texture" id=1]
 [ext_resource path="res://assets/HealthBarProgress.png" type="Texture" id=2]
 [ext_resource path="res://assets/HealthBarUnder.png" type="Texture" id=3]
+[ext_resource path="res://src/PlayerUI.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 antialiased = false
@@ -15,6 +16,12 @@ font_data = SubResource( 1 )
 [node name="PlayerUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 4 )
+healthLabel_path = NodePath("GridContainer/HealthBar/CenterContainer/Label")
+healthBar_path = NodePath("GridContainer/HealthBar")
+expLabel_path = NodePath("GridContainer/ExpBar/CenterContainer/Label")
+expBar_path = NodePath("GridContainer/ExpBar")
+levelLabel_path = NodePath("Level")
 
 [node name="Level" type="Label" parent="."]
 modulate = Color( 1, 0, 0.796078, 1 )
