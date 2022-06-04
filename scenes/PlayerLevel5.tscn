@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://src/InteractionArea.gd" type="Script" id=1]
 [ext_resource path="res://src/Entity.gd" type="Script" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://scenes/HitBox.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/slash.png" type="Texture" id=16]
 [ext_resource path="res://scenes/AttackRecoverBar.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/DefendRcoverBar.tscn" type="PackedScene" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 6.5 )
@@ -841,6 +842,14 @@ margin_right = -12.0
 margin_bottom = 10.0
 rect_scale = Vector2( 0.25, 0.25 )
 attackProperties_path = NodePath("../StateMachine/Attack")
+
+[node name="DefendRcoverBar" parent="." instance=ExtResource( 18 )]
+margin_left = 8.0
+margin_top = 10.0
+margin_right = 8.0
+margin_bottom = 10.0
+rect_scale = Vector2( 0.25, 0.25 )
+defendProperties_path = NodePath("../StateMachine/Defend")
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 5 )

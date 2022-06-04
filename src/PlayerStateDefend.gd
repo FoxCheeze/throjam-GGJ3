@@ -1,11 +1,20 @@
 extends State
 
 export var speed_decrease: float = 2
+export var defend_recover_time: float = 5
 
 var input_direction: Vector2 = Vector2.ZERO setget set_input_direction
 
 
+func _ready():
+	yield(owner, "ready")
+
+	var err = entity.connect("received_attack", self, "_on_Attacked")
+	assert(err == OK)
+
+
 func on_enter(_msg: Dictionary = {}):
+	entity.get_node("Sprite").self_modulate = Color("#96ff00")
 	AnimationHandler.four_direction_animation(
 		entity.animationPlayer,
 		entity.looking_direction,
@@ -49,3 +58,12 @@ func set_input_direction(new_input_direction: Vector2):
 		entity.positionPivot,
 		self.name
 	)
+
+func _on_Attacked():
+	playerStats.can_defend = false
+	playerStats.defendRecoverTimer.start(defend_recover_time)
+	state_machine.transition_state("Idle")
+
+
+func on_exit():
+	entity.get_node("Sprite").self_modulate = Color("#ffffff")

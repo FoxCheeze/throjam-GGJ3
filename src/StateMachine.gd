@@ -45,6 +45,9 @@ func transition_state(target_state: String, msg: Dictionary = {}):
 	if not target_state in states_names:
 		return
 	
+	if state.name == "Die":
+		return
+	
 	state.on_exit()
 
 	history.push_front(state)
