@@ -15,6 +15,7 @@ func _ready():
 
 
 func on_enter(_msg: Dictionary = {}):
+	entity.sfx.get_node("Hit").play()
 	entity.get_node("Slash").visible = true
 	direction = entity.looking_direction
 	AnimationHandler.four_direction_animation(

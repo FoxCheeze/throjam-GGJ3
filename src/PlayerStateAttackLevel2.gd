@@ -15,6 +15,7 @@ func _ready():
 
 
 func on_enter(_msg: Dictionary = {}):
+	entity.sfx.get_node("Hit").play()
 	entity.get_node("Slash").visible = true
 	playerStats.can_attack = false
 	playerStats.attackRecoverTimer.start(attack_recover_time)

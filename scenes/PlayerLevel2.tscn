@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://assets/PlayerLevel.2.png" type="Texture" id=1]
 [ext_resource path="res://scenes/PlayerStateDie.1.tscn" type="PackedScene" id=2]
@@ -15,6 +15,10 @@
 [ext_resource path="res://scenes/HitBox.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/slash.png" type="Texture" id=14]
 [ext_resource path="res://scenes/AttackRecoverBar.tscn" type="PackedScene" id=15]
+[ext_resource path="res://sfx/player_die.wav" type="AudioStream" id=17]
+[ext_resource path="res://sfx/player_defend.wav" type="AudioStream" id=18]
+[ext_resource path="res://sfx/player_hurt.wav" type="AudioStream" id=19]
+[ext_resource path="res://sfx/player_hit.wav" type="AudioStream" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 6 )
@@ -722,6 +726,20 @@ max_health = 80
 damage = 14
 knockback_force = 100.0
 max_speed = 75.0
+
+[node name="Sfx" type="Node2D" parent="."]
+
+[node name="Defend" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource( 18 )
+
+[node name="Die" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource( 17 )
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource( 20 )
+
+[node name="Hurt" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource( 19 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

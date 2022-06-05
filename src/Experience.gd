@@ -7,6 +7,9 @@ var player: Entity = null
 
 
 func _physics_process(delta: float):
+	if playerStats.level >= 5:
+		self.modulate = Color("#ff00cb")
+
 	if player == null:
 		return
 

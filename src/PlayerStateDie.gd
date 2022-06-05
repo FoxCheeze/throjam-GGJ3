@@ -2,6 +2,7 @@ extends State
 
 
 func on_enter(_msg := {}):
+	entity.sfx.get_node("Die").play()
 	entity.collisionBoxes.disable_box(["All"])
 	entity.set_deferred("collision_layer", 0)
 	entity.animationPlayer.play("Die")

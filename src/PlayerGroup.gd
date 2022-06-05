@@ -6,9 +6,11 @@ func _ready():
 	assert(err == OK)
 
 	playerStats.player = get_node("PlayerLevel1")
+	playerStats.playerManager = self
 
 
 func on_player_level_up(_previous_level):
+	get_node("LevelUpSfx").play()
 	if playerStats.level > 5:
 		return
 	

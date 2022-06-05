@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://src/StateMachine.gd" type="Script" id=1]
 [ext_resource path="res://src/Entity.gd" type="Script" id=2]
@@ -14,6 +14,9 @@
 [ext_resource path="res://assets/slash.png" type="Texture" id=12]
 [ext_resource path="res://scenes/EnemyStateRoam.1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/EnemyHealthBar.tscn" type="PackedScene" id=14]
+[ext_resource path="res://sfx/enemy_die.wav" type="AudioStream" id=15]
+[ext_resource path="res://sfx/enemy_hit.wav" type="AudioStream" id=16]
+[ext_resource path="res://sfx/enemy_hurt.wav" type="AudioStream" id=17]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 50.0
@@ -825,9 +828,20 @@ acceleration = 300.0
 friction = 200.0
 health = 80
 max_health = 80
-damage = 35
+damage = 25
 knockback_force = 160.0
 max_speed = 30.0
+
+[node name="Sfx" type="Node2D" parent="."]
+
+[node name="Die" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource( 15 )
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource( 16 )
+
+[node name="Hurt" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource( 17 )
 
 [node name="EnemyHealthBar" parent="." instance=ExtResource( 14 )]
 margin_left = -9.5
@@ -902,7 +916,7 @@ initial_state = NodePath("Roam")
 speed_multiplier = 2.5
 
 [node name="Die" parent="StateMachine" instance=ExtResource( 6 )]
-exp_drop = 5
+exp_drop = 10
 drop_range = 30.0
 
 [node name="Idle" parent="StateMachine" instance=ExtResource( 4 )]

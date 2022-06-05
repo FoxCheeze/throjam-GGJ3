@@ -5,6 +5,7 @@ export var drop_range: float = 100
 
 
 func on_enter(_msg := {}):
+	entity.sfx.get_node("Die").play()
 	entity.collision_layer = 0
 	entity.collisionBoxes.disable_box(["All"])
 	entity.animationPlayer.play("Die")

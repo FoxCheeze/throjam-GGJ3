@@ -17,6 +17,7 @@ func _on_AttackRangeDetector_body_entered(_body):
 
 
 func on_enter(_msg := {}):
+	entity.sfx.get_node("Hit").play()
 	entity.get_node("Slash").visible = true
 	AnimationHandler.four_direction_animation(
 		entity.animationPlayer,

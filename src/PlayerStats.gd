@@ -3,6 +3,7 @@ extends Node
 
 signal leveled_up(previous_level)
 signal player_died()
+signal victory()
 
 var debug: bool = false
 
@@ -15,10 +16,11 @@ var can_defend: bool = true
 var experience: int = 0 
 var experience_required: int = get_experience_required()
 var player = null
+var playerManager
 
 
 func get_experience_required() -> int:
-	return int(round(pow(level + 1, 2) * 2 + 10))
+	return int(round(pow(level + 1, 2) * 8 + 10))
 
 
 func _ready():
@@ -38,6 +40,9 @@ func _ready():
 
 
 func gain_experience(experience_value: int):
+	if level >= 5:
+		return
+
 	experience += experience_value
 
 	while experience >= experience_required:
@@ -51,6 +56,14 @@ func level_up():
 	emit_signal("leveled_up", level - 1)
 
 	experience_required = get_experience_required()
+
+
+func heal(heal_value: int):
+	if player.health >= player.max_health:
+		player.health = player.max_health
+		return
+
+	player.health += heal_value
 
 
 func on_AttackRecoverTimer_timeout():
@@ -67,3 +80,12 @@ func _process(_delta):
 			debug = false
 		else:
 			debug = true
+
+func on_player_victory():
+	emit_signal("victory")
+
+
+func restart():
+	level = 1
+	experience = 0
+	experience_required = get_experience_required()

@@ -14,6 +14,7 @@ export var max_speed: float = 100
 onready var animationPlayer: AnimationPlayer = $AnimationPlayer as AnimationPlayer
 onready var collisionBoxes: CollisionBoxes = $PositionPivot/CollisionBoxes as CollisionBoxes
 onready var positionPivot: Position2D = $PositionPivot as Position2D
+onready var sfx: Node2D = $Sfx
 onready var fsm = get_node("StateMachine")
 
 var velocity: Vector2 = Vector2.ZERO
@@ -44,7 +45,8 @@ func set_health(new_health):
 		health = new_health
 
 	if health <= 0:
-		playerStats.emit_signal("player_died")
+		if self.name.begins_with("Player"):
+			playerStats.emit_signal("player_died")
 		collisionBoxes.disable_box(["All"])
 		fsm.transition_state("Die")
 
@@ -52,13 +54,16 @@ func set_health(new_health):
 func recieve_damage(damage_value: int):
 	if fsm.state.name == "Defend":
 		damage_value = 0
-		
+		sfx.get_node("Defend").play()
+	else:
+		sfx.get_node("Hurt").play()
+	
 	set_health(health - damage_value)
 	
 	
 func recieve_knockback(knockback_value: float, direction: Vector2):
 	if fsm.state.name == "Defend":
-		knockback_value /= 4
+		knockback_value /= 2
 			
 	velocity = direction * knockback_value 
 	if fsm.state.name == "Defend":

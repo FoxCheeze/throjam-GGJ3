@@ -20,20 +20,59 @@ health = 5000000
 
 [node name="Enemies" type="YSort" parent="YSort"]
 
-[node name="Enemy1" parent="YSort/Enemies" instance=ExtResource( 5 )]
-position = Vector2( 572, 183 )
+[node name="Enemy6" parent="YSort/Enemies" instance=ExtResource( 5 )]
+position = Vector2( -25, 124 )
+
+[node name="Enemy7" parent="YSort/Enemies" instance=ExtResource( 5 )]
+position = Vector2( -114, 113 )
 
 [node name="Enemy3Group" parent="YSort/Enemies" instance=ExtResource( 6 )]
-position = Vector2( 687, 250 )
+position = Vector2( 222, 398 )
 
-[node name="Enemy4Group" parent="YSort/Enemies" instance=ExtResource( 7 )]
-position = Vector2( 484, 322 )
+[node name="Enemy3Group2" parent="YSort/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 308, 387 )
+
+[node name="Enemy3Group4" parent="YSort/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 174, 542 )
+
+[node name="Enemy3Group7" parent="YSort/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 397, 438 )
+
+[node name="Enemy3Group8" parent="YSort/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 150, 481 )
 
 [node name="Enemy2" parent="YSort/Enemies" instance=ExtResource( 3 )]
 position = Vector2( 69, 306 )
 
+[node name="Enemy3" parent="YSort/Enemies" instance=ExtResource( 3 )]
+position = Vector2( 1, 240 )
+
+[node name="Enemy4" parent="YSort/Enemies" instance=ExtResource( 3 )]
+position = Vector2( -28, 326 )
+
+[node name="Enemy5" parent="YSort/Enemies" instance=ExtResource( 3 )]
+position = Vector2( 29, 399 )
+
+[node name="Enemy4Group" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 669, 219 )
+
+[node name="Enemy4Group2" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 737, 80 )
+
+[node name="Enemy4Group3" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 804, 246 )
+
+[node name="Enemy4Group4" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 897, 136 )
+
+[node name="Enemy4Group5" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 747, 163 )
+
+[node name="Enemy4Group6" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 638, 36 )
+
 [node name="Exp" type="YSort" parent="YSort"]
-position = Vector2( 26, -121 )
+position = Vector2( 11, -130 )
 
 [node name="Experience" parent="YSort/Exp" instance=ExtResource( 2 )]
 position = Vector2( 260, 145 )
@@ -75,6 +114,1086 @@ position = Vector2( 353, 153 )
 position = Vector2( 352, 252 )
 
 [node name="Experience14" parent="YSort/Exp" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp2" type="YSort" parent="YSort"]
+position = Vector2( 54, -114 )
+
+[node name="Experience" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp2" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp3" type="YSort" parent="YSort"]
+position = Vector2( 33, -132 )
+
+[node name="Experience" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp3" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp4" type="YSort" parent="YSort"]
+position = Vector2( 87, -132 )
+
+[node name="Experience" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp4" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp5" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp5" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp9" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp9" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp10" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp10" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp11" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp11" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp12" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp12" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp13" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp13" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp14" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp14" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp15" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp15" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp16" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp16" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp17" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp17" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp18" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp18" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp19" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp19" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp20" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp20" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp21" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp21" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp22" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp22" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp23" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp23" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp24" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp24" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp25" type="YSort" parent="YSort"]
+position = Vector2( -30, -130 )
+
+[node name="Experience" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp25" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp6" type="YSort" parent="YSort"]
+position = Vector2( -8, -115 )
+
+[node name="Experience" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp6" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp7" type="YSort" parent="YSort"]
+position = Vector2( 76, -114 )
+
+[node name="Experience" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp7" instance=ExtResource( 2 )]
+position = Vector2( 277, 315 )
+
+[node name="Exp8" type="YSort" parent="YSort"]
+position = Vector2( 80, -128 )
+
+[node name="Experience" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 260, 145 )
+
+[node name="Experience2" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 118, 144 )
+
+[node name="Experience3" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 190, 73 )
+
+[node name="Experience4" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 335, 76 )
+
+[node name="Experience5" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 403, 160 )
+
+[node name="Experience6" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 402, 259 )
+
+[node name="Experience7" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 327, 322 )
+
+[node name="Experience8" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 210, 138 )
+
+[node name="Experience9" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 68, 137 )
+
+[node name="Experience10" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 140, 66 )
+
+[node name="Experience11" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 285, 69 )
+
+[node name="Experience12" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 353, 153 )
+
+[node name="Experience13" parent="YSort/Exp8" instance=ExtResource( 2 )]
+position = Vector2( 352, 252 )
+
+[node name="Experience14" parent="YSort/Exp8" instance=ExtResource( 2 )]
 position = Vector2( 277, 315 )
 
 [editable path="Player"]

@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://src/Quit.gd" type="Script" id=1]
+[ext_resource path="res://src/Retry.gd" type="Script" id=2]
+[ext_resource path="res://assets/PitchBlack.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFontData" id=15]
+antialiased = false
+font_path = "res://fonts/public_pixel/PublicPixel.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 32
+font_data = SubResource( 15 )
+
+[sub_resource type="DynamicFontData" id=16]
+antialiased = false
+font_path = "res://fonts/public_pixel/PublicPixel.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+font_data = SubResource( 16 )
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="DynamicFontData" id=17]
+antialiased = false
+font_path = "res://fonts/public_pixel/PublicPixel.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+font_data = SubResource( 17 )
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[node name="DeathScreen" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+modulate = Color( 1, 1, 1, 0.541176 )
+margin_right = 513.0
+margin_bottom = 288.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -104.0
+
+[node name="Text" type="Label" parent="Control/CenterContainer"]
+margin_left = 128.0
+margin_top = 76.0
+margin_right = 384.0
+margin_bottom = 108.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 8 )
+text = "You Died"
+align = 1
+valign = 1
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+margin_left = 209.0
+margin_top = 142.0
+margin_right = 289.0
+margin_bottom = 182.0
+
+[node name="Retry" type="Button" parent="Control/GridContainer"]
+modulate = Color( 1, 0, 0.796078, 1 )
+margin_right = 80.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+text = "Retry"
+script = ExtResource( 2 )
+
+[node name="Quit" type="Button" parent="Control/GridContainer"]
+modulate = Color( 1, 0, 0.796078, 1 )
+margin_top = 22.0
+margin_right = 80.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 13 )
+custom_styles/normal = SubResource( 14 )
+text = "Quit"
+script = ExtResource( 1 )
+
+[connection signal="pressed" from="Control/GridContainer/Retry" to="Control/GridContainer/Retry" method="_on_Retry_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Quit" to="Control/GridContainer/Quit" method="_on_Quit_pressed"]
