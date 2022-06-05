@@ -21,6 +21,11 @@ func _ready():
 
 
 func _process(_delta):
+	if playerStats.debug:
+		show()
+	else:
+		hide()
+	
 	previousState.text = "History:\n" + str(entity.get_node("StateMachine").history)
 	currentState.text = str(entity.get_node("StateMachine").state)
 	level.text = str(playerStats.level)

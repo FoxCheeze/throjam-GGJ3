@@ -7,5 +7,7 @@ func _ready():
 
 
 func _on_HurtBox_area_entered(area):
+	if area.name.begins_with("Attack"):
+		return
 	owner.recieve_damage(area.damage)
 	owner.recieve_knockback(area.knockback_force, (area.global_position - owner.global_position).normalized() * -1)

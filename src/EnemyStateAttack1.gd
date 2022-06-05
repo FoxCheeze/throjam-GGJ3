@@ -17,7 +17,7 @@ func _on_AttackRangeDetector_body_entered(_body):
 
 
 func on_enter(_msg := {}):
-	entity.collisionBoxes.enable_box(["HitBox"])
+	entity.get_node("Slash").visible = true
 	AnimationHandler.four_direction_animation(
 		entity.animationPlayer,
 		entity.looking_direction,
@@ -41,5 +41,6 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 
 func on_exit():
+	entity.get_node("Slash").visible = false
 	entity.collisionBoxes.disable_box(["HitBox"])
 	entity.collisionBoxes.enable_box(["AttackRangeDetector"]) # Evita sair com caixa desativada （念の為）

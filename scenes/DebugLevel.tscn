@@ -9,14 +9,19 @@
 
 [node name="DebugLevel" type="Node2D"]
 
-[node name="YSort" type="YSort" parent="."]
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 198, 204 )
 
-[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+[node name="PlayerLevel1" parent="Player" index="0"]
+position = Vector2( 0, 0 )
+health = 5000000
+
+[node name="YSort" type="YSort" parent="."]
 
 [node name="Enemies" type="YSort" parent="YSort"]
 
 [node name="Enemy1" parent="YSort/Enemies" instance=ExtResource( 5 )]
-position = Vector2( 25, 242 )
+position = Vector2( 572, 183 )
 
 [node name="Enemy3Group" parent="YSort/Enemies" instance=ExtResource( 6 )]
 position = Vector2( 687, 250 )
@@ -25,10 +30,10 @@ position = Vector2( 687, 250 )
 position = Vector2( 484, 322 )
 
 [node name="Enemy2" parent="YSort/Enemies" instance=ExtResource( 3 )]
-position = Vector2( 521, 163 )
+position = Vector2( 69, 306 )
 
 [node name="Exp" type="YSort" parent="YSort"]
-position = Vector2( -414, -268 )
+position = Vector2( 26, -121 )
 
 [node name="Experience" parent="YSort/Exp" instance=ExtResource( 2 )]
 position = Vector2( 260, 145 )
@@ -72,4 +77,4 @@ position = Vector2( 352, 252 )
 [node name="Experience14" parent="YSort/Exp" instance=ExtResource( 2 )]
 position = Vector2( 277, 315 )
 
-[editable path="YSort/Player"]
+[editable path="Player"]

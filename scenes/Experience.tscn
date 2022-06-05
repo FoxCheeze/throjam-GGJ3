@@ -113,10 +113,10 @@ radius = 3.0
 radius = 41.0122
 
 [node name="Experience" type="Area2D"]
-scale = Vector2( 2, 2 )
 collision_layer = 128
 collision_mask = 2
 script = ExtResource( 2 )
+experience_value = 1
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.3, 0.3 )

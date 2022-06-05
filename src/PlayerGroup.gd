@@ -8,18 +8,16 @@ func _ready():
 	playerStats.player = get_node("PlayerLevel1")
 
 
-func on_player_level_up(previous_level):
+func on_player_level_up(_previous_level):
 	if playerStats.level > 5:
 		return
 	
-	var player = get_node("PlayerLevel%d" % previous_level)
-	var current_position = player.global_position
-	
+	var player = playerStats.player
 	
 	var new_player = load("res://scenes/PlayerLevel%d.tscn" % playerStats.level).instance()
 	
-	new_player.global_position = current_position
-	player.queue_free()
+	new_player.position = player.position
 	call_deferred("add_child", new_player)
 	playerStats.player = new_player
+	player.queue_free()
 	

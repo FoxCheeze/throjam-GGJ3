@@ -27,7 +27,11 @@ func _process(_delta):
 	healthLabel.text = str(playerStats.player.health) + "/" + str(playerStats.player.max_health)
 
 	expBar.max_value = playerStats.experience_required
-	expBar.value = playerStats.experience
-	expLabel.text = str(playerStats.experience) + "/" + str(playerStats.experience_required)
+	if playerStats.level < 5:
+		expBar.value = playerStats.experience
+		expLabel.text = str(playerStats.experience) + "/" + str(playerStats.experience_required)
+	else:
+		expLabel.text = "MAX"
+		expBar.value = expBar.max_value
 
 	levelLabel.text = str(playerStats.level)

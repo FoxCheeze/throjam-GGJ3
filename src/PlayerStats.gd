@@ -2,6 +2,9 @@ class_name PlayerStats
 extends Node
 
 signal leveled_up(previous_level)
+signal player_died()
+
+var debug: bool = false
 
 var level: int = 1
 var attackRecoverTimer: Timer = null
@@ -15,7 +18,7 @@ var player = null
 
 
 func get_experience_required() -> int:
-	return int(round(pow(level + 1, 1.5) * 2 + 10))
+	return int(round(pow(level + 1, 2) * 2 + 10))
 
 
 func _ready():
@@ -56,3 +59,11 @@ func on_AttackRecoverTimer_timeout():
 
 func on_DefendRecoverTimer_timeout():
 	can_defend = true
+
+
+func _process(_delta):
+	if Input.is_action_just_pressed("ui_page_down"):
+		if debug:
+			debug = false
+		else:
+			debug = true

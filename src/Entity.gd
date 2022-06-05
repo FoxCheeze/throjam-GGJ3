@@ -44,6 +44,7 @@ func set_health(new_health):
 		health = new_health
 
 	if health <= 0:
+		playerStats.emit_signal("player_died")
 		collisionBoxes.disable_box(["All"])
 		fsm.transition_state("Die")
 

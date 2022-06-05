@@ -78,7 +78,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -3 ), Vector2( 0, -17 ) ]
+"values": [ Vector2( 0, -3 ), Vector2( 0, -23 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:position")
@@ -90,7 +90,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -5 ), Vector2( 0, -19 ) ]
+"values": [ Vector2( 0, -5 ), Vector2( 0, -25 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:disabled")
@@ -167,7 +167,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -8 ), Vector2( 0, 3 ) ]
+"values": [ Vector2( 0, -8 ), Vector2( 0, 9 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:shape:extents")
@@ -191,7 +191,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 6 ), Vector2( 0, 17 ) ]
+"values": [ Vector2( 0, 6 ), Vector2( 0, 23 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:disabled")
@@ -292,7 +292,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 7, -8 ), Vector2( -8, -8 ) ]
+"values": [ Vector2( 7, -8 ), Vector2( -14, -8 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:disabled")
@@ -328,7 +328,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -4, -1 ), Vector2( -19, -1 ) ]
+"values": [ Vector2( -4, -1 ), Vector2( -25, -1 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:shape:extents")
@@ -393,7 +393,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -7, -8 ), Vector2( 7, -8 ) ]
+"values": [ Vector2( -7, -8 ), Vector2( 13, -8 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:rotation_degrees")
@@ -429,7 +429,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 4, -1 ), Vector2( 18, -1 ) ]
+"values": [ Vector2( 4, -1 ), Vector2( 24, -1 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("PositionPivot/CollisionBoxes/HitBox/CollisionShape2D:shape:extents")
@@ -715,9 +715,13 @@ tracks/0/keys = {
 [node name="PlayerLevel2" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 4 )
-acceleration = 550.0
-friction = 550.0
-max_speed = 150.0
+acceleration = 700.0
+friction = 700.0
+health = 80
+max_health = 80
+damage = 14
+knockback_force = 100.0
+max_speed = 75.0
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -782,6 +786,7 @@ script = ExtResource( 5 )
 initial_state = NodePath("Idle")
 
 [node name="Attack" parent="StateMachine" instance=ExtResource( 11 )]
+attack_recover_time = 2.5
 
 [node name="Die" parent="StateMachine" instance=ExtResource( 2 )]
 
